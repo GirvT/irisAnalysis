@@ -1,0 +1,27 @@
+>#Basic Commands
+>class(iris)
+>?iris
+>names(iris)
+>iris
+>str(iris)
+>summary(iris)
+
+>#Box Plot
+>#plot1
+>par(mfrow=c(1,2))
+>plot(iris$Petal.Length)
+>boxplot(iris$Petal.Length~ iris$Species)
+>#plot2
+>par(mfrow=c(2,2))
+>for(i in 1:4) boxplot(iris[,i] ~ Species, data=iris, main=names(iris)[i])
+
+>#Scatter Plot
+>#scatter1
+>plot(iris$Petal.Length, iris$Petal.Width)
+>#scatter2
+>pairs(iris[1:4], pch = 21)
+
+>#Histogram
+>par(mfrow=c(1,1))
+>hist(iris$Petal.Length[1:50])
+
